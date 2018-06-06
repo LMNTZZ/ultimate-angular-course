@@ -1,9 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
+{{today | date: 'dd/MM/yyyy hh:mm a'}}
+
 <div style="text-align:center">
   <h1 myHighlight style="color: white;">
     {{ title }}
   </h1>
-
-  <app-stocks></app-stocks>
 </div>
 
+<app-stocks></app-stocks>
+
+<div style="text-align: center">
+  <h1>Custom Angular Pipe Example</h1>
+</div>
+
+<h3>Capitalize first letter using a Pipe:</h3>
+<label for="fname">First Name : </label>
+<input type="text" [(ngModel)]="firstname" name="fname" id="fname">
+<br>
+<p>First Name (Capitalized) : {{firstname | capitalize}}</p>
+<p>______________________</p>
+<h3>Using custom pipes on an Object</h3>
+<p>Employee Name : {{employee | employeeName}}</p>

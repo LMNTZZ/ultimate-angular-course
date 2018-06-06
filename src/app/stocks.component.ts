@@ -15,6 +15,7 @@ export class StocksComponent {
   title = 'List of Stocks: ';
   //stocks = ['AAPL', 'IBM', 'GOOG', 'UDEMY'];
   stocks;
+
   constructor(stockService : StockService){
     this.stocks = stockService.getStocks();
   }

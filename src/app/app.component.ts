@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StocksComponent } from './stocks.component';
+import {Employee} from './employee';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { StocksComponent } from './stocks.component';
 })
 export class AppComponent {
   title = 'Angular course';
+  today = new Date();
+  firstname = 'kevin';
+
+  employee : Employee = new Employee('John', 'Doe', 4000);
+
 }
