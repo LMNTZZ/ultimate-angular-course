@@ -14,4 +14,6 @@ export class AppComponent {
 
   employee : Employee = new Employee('John', 'Doe', 4000);
 
+  profile = { id: 10001, name: 'James Bond', role: 'Administrator'};
+
 }

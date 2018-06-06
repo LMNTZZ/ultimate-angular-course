@@ -26,3 +26,15 @@
 <p>______________________</p>
 <h3>Using custom pipes on an Object</h3>
 <p>Employee Name : {{employee | employeeName}}</p>
+
+<h3>Playing around with *ngIf</h3>
+<div *ngIf="profile">
+  <p>
+    Name : {{ profile.name }}
+  </p>
+</div>
+<div *ngIf="!profile">
+  <p>
+    No profile found!
+  </p>
+</div>
