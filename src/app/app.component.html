@@ -1,40 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-{{today | date: 'dd/MM/yyyy hh:mm a'}}
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" href="#">Angular Finance</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div style="text-align:center">
-  <h1 myHighlight style="color: white;">
-    {{ title }}
-  </h1>
-</div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/stocks">Stocks</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- Piping examole -->
+  <!-- {{today | date: 'dd/MM/yyyy hh:mm a'}} -->
 
-<!-- Without routing uncomment following line -->
-<!-- <app-stocks></app-stocks> -->
+  <div style="text-align:center">
+    <h1 myHighlight style="color: white;">
+      {{ title }}
+    </h1>
+  </div>
 
-<!-- With routing -->
-<a routerLink="/stocks">STOCKS</a>
-<router-outlet></router-outlet>
+  <!-- Without routing uncomment following line -->
+  <!-- <app-stocks></app-stocks> -->
 
-<div style="text-align: center">
-  <h1>Custom Angular Pipe Example</h1>
-</div>
+  <!-- With routing without navbar -->
+  <!-- <a routerLink="/stocks">STOCKS</a> -->
+  <router-outlet></router-outlet>
 
-<h3>Capitalize first letter using a Pipe:</h3>
-<label for="fname">First Name : </label>
-<input type="text" [(ngModel)]="firstname" name="fname" id="fname">
-<br>
-<p>First Name (Capitalized) : {{firstname | capitalize}}</p>
-<p>______________________</p>
-<h3>Using custom pipes on an Object</h3>
-<p>Employee Name : {{employee | employeeName}}</p>
+  <button class="btn btn-primary">Test Button</button>
 
-<h3>Playing around with *ngIf</h3>
-<div *ngIf="profile">
-  <p>
-    Name : {{ profile.name }}
-  </p>
-</div>
-<div *ngIf="!profile">
-  <p>
-    No profile found!
-  </p>
+  <div style="text-align: center">
+    <h1>Custom Angular Pipe Example</h1>
+  </div>
+
+  <h3>Capitalize first letter using a Pipe:</h3>
+  <label for="fname">First Name : </label>
+  <input type="text" [(ngModel)]="firstname" name="fname" id="fname">
+  <br>
+  <p>First Name (Capitalized) : {{firstname | capitalize}}</p>
+  <p>______________________</p>
+  <h3>Using custom pipes on an Object</h3>
+  <p>Employee Name : {{employee | employeeName}}</p>
+
+  <h3>Playing around with *ngIf</h3>
+  <div *ngIf="profile">
+    <p>
+      Name : {{ profile.name }}
+    </p>
+  </div>
+    <div *ngIf="!profile">
+     <p>
+       No profile found!
+     </p>
+  </div>
 </div>
