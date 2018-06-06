@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StocksComponent} from './stocks.component';
+import { StocksComponent } from './stocks.component';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { StocksComponent} from './stocks.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'James Bond';
+  title = 'Angular course';
 }
